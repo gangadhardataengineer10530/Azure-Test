@@ -1,0 +1,20 @@
+{
+	"name": "PL_Wait_Activity",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait_Activity",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 3
+				}
+			}
+		],
+		"folder": {
+			"name": "WaitActivity"
+		},
+		"annotations": []
+	}
+}
