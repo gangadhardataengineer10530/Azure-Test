@@ -1,0 +1,26 @@
+{
+	"name": "DS_From_azSQL_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_From_azSQL_Source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "SID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SNAME",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "students"
+		}
+	}
+}
