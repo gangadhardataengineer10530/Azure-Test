@@ -1,0 +1,23 @@
+{
+	"name": "DS_WildFile_Path_Output",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_WildFile_Path_Output",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "output",
+				"fileSystem": "datafiles1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
