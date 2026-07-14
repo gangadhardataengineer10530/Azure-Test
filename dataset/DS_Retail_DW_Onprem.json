@@ -1,0 +1,19 @@
+{
+	"name": "DS_Retail_DW_Onprem",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_onPrem_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Dataset_Retail_DW"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ADF_Watermark_Table"
+		}
+	}
+}
