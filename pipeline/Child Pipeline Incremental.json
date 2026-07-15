@@ -33,7 +33,7 @@
 								"type": "Expression"
 							},
 							"TableName": {
-								"value": "@pipeline().parameters.TableSchema",
+								"value": "@pipeline().parameters.Tablename",
 								"type": "Expression"
 							}
 						}
@@ -130,6 +130,43 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "EXEC_UPDATE_WH_STORE_PROCEDRE",
+							"type": "ExecutePipeline",
+							"dependsOn": [
+								{
+									"activity": "COPYSQL_FULL_INCREMENTAL",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "PL_Child_Stroe_Procedure",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"TableSchema": {
+										"value": "@pipeline().parameters.TableSchema",
+										"type": "Expression"
+									},
+									"TableName": {
+										"value": "@pipeline().parameters.Tablename",
+										"type": "Expression"
+									},
+									"WaterMarkColumn": {
+										"value": "@pipeline().parameters.WatermarkColumn",
+										"type": "Expression"
+									}
+								}
+							}
 						}
 					]
 				}
